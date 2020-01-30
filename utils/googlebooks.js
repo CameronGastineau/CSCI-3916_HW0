@@ -8,7 +8,15 @@ module.exports = async (phrase) => {
         }
     })
 
-    return JSON.stringify(results.data);
+    var jsonData = {
+        data: results.data,
+        status: results.status,
+        statusText: results.statusText,
+        headers: results.headers,
+        requestHeader: results.config.headers
+    }
+
+    return JSON.stringify(jsonData);
 }
 
 /*  console.log(results.data);
