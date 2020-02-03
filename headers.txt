@@ -1,0 +1,38 @@
+GET https://www.googleapis.com/books/v1/volumes?q=Turing;
+
+Request Headers
+    User-Agent: PostmanRuntime/7.22.0                                   // Request header: client software product that initiated request
+    Accept: */*                                                         // Request header: indicates acceptable media type, language, and character sets on client
+    Cache-Control: no-cache                                             // General Header: Request no caching to take place
+    Postman-Token: 193940af-946b-4f11-992b-b9b421f49177                 // Client-Specific Header: Random token generated to bypass a bug in Chrome
+    Host: www.googleapis.com                                            // Request header: Mandatory for HTTP/1.1 clients
+    Accept-Encoding: gzip, deflate, br                                  // Request header: indicates accepted encoding
+    Connection: keep-alive                                              // General Header: persistent connection, remain open until command to close or time-out occurs
+Response Headers
+    Expires: Sun, 02 Feb 2020 23:52:57 GMT                              // Entity Header: timestamp of when entity expires
+    Date: Sun, 02 Feb 2020 23:52:57 GMT                                 // General Header: timestamp of request
+    Cache-Control: private, max-age=0, must-revalidate, no-transform    // General Header: user-specific private cache, immediate expiry, revalidate to see changes, no change to source
+    ETag: "iPPser6Mov75mJUb_EktR4oB1SI/VbxjeJ1Zo354KiGeo0CzFTzvyGY"     // Response Header: MD5 hash of entity, used to check for modiciations
+    Vary: Origin                                                        // Response Header: prevent caching (resource is dependent on origin)
+    Vary: X-Origin                                                      // Response Header: prevent caching (resource is dependent on origin)
+    Content-Type: application/json; charset=UTF-8                       // Entity Header: type of content - json in UTF-8 format
+    Content-Encoding: gzip                                              // Entity Header: encoding sent
+    X-Content-Type-Options: nosniff                                     // Response Header: disable content and MIME sniffing
+    X-Frame-Options: SAMEORIGIN                                         // Response Header: can only be displayed in a frame on the same origin as page
+    X-XSS-Protection: 1; mode=block                                     // Response Header: Stops pages from loading when they detect reflected CSS attacks
+    Server: GSE                                                         // Response Header: Server generating message
+    Alt-Svc:                                                            // Response Header: alternative services for origin that are accessible through different connections
+        quic=":443";
+        ma=2592000;
+        v="46,43",h3-Q050=":443";
+        ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443";
+        ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443";
+        ma=2592000
+    Transfer-Encoding: chunked                                          // General header: chunked breaks data into smaller parts for transfer
+
+//////////
+GET https://www.googleapis.com/books/v1/volumes/QnUPBAAAQBAJ
+
+[Same Headers for both request and response - different information in some, but same overall meanings]
